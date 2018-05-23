@@ -22,7 +22,10 @@ public class DescriptionEnglishTimeFragment extends Fragment {
         } else {
             FragmentTransaction ft = getChildFragmentManager().beginTransaction();
             WatchFragment watchFragment = new WatchFragment();
-            ft.replace(R.id.)
+            ft.replace(R.id.containerWatch, watchFragment);
+            ft.addToBackStack(null);
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            ft.commit();
         }
 
         return inflater.inflate(R.layout.fragment_description_english_time, container, false);
