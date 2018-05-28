@@ -33,24 +33,7 @@ public class WatchFragment extends Fragment implements View.OnClickListener {
         return layout;
     }
 
-    @Override
-    public void onCreate( Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
 
-        if (savedInstanceState != null) {
-            seconds = savedInstanceState.getInt("seconds");
-            running = savedInstanceState.getBoolean("running");
-            wasRunning = savedInstanceState.getBoolean("wasRunning");
-        }
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt("seconds", seconds);
-        outState.putBoolean("running", running);
-        outState.putBoolean("wasRunning",wasRunning);
-    }
 
     private void runTimer(View view) {
         final TextView timer = view.findViewById(R.id.timer);
